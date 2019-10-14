@@ -19,13 +19,6 @@ import pretest.app.tokoglints.utils.isWritable
 
 class MainActivity : LoginRequiredActivity(), MainActivityBehavior {
 
-    override fun showData(data: List<Goods>) {
-        goods.clear()
-        goods.addAll(data)
-        adapter.notifyDataSetChanged()
-    }
-
-
     private var mDialogFragment: DialogFragment? = null
     private var goods = mutableListOf<Goods>()
     private val adapter = SimpleRecyclerViewAdapter(goods)
@@ -61,5 +54,11 @@ class MainActivity : LoginRequiredActivity(), MainActivityBehavior {
             finish()
         }
         super.onBackPressed()
+    }
+
+    override fun showData(data: List<Goods>) {
+        goods.clear()
+        goods.addAll(data)
+        adapter.notifyDataSetChanged()
     }
 }
