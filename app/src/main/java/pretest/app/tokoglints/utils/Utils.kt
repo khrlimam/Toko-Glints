@@ -11,7 +11,7 @@ fun Context.appPreference() = getSharedPreferences(BuildConfig.APPLICATION_ID, C
 fun Context.editAppPreference() = appPreference().edit()
 fun Context.loggedIn() = appPreference().getBoolean(LOGGED_IN, false)
 fun Context.getLoggedUser() = appPreference().getString(LOGGED_USER, "")
-fun Context.isWritable() = Auth.getUser(getLoggedUser())?.get("access").equals("write", true)
+fun Context.userHasWriteAccess() = Auth.getUser(getLoggedUser())?.get("access").equals("write", true)
 fun View.gone() {
     visibility = View.GONE
 }

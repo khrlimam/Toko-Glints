@@ -15,7 +15,7 @@ import pretest.app.tokoglints.presenters.MainActivityPresenter
 import pretest.app.tokoglints.utils.LOGGED_IN
 import pretest.app.tokoglints.utils.editAppPreference
 import pretest.app.tokoglints.utils.gone
-import pretest.app.tokoglints.utils.isWritable
+import pretest.app.tokoglints.utils.userHasWriteAccess
 
 class MainActivity : LoginRequiredActivity(), MainActivityBehavior {
 
@@ -28,7 +28,7 @@ class MainActivity : LoginRequiredActivity(), MainActivityBehavior {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (!isWritable())
+        if (!userHasWriteAccess())
             btnAddItem.gone()
 
         setupRecyclerView()
