@@ -1,11 +1,63 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/blueAqua</item>
+        <item name="colorPrimaryDark">@color/lighterBlue</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorControlNormal">#CCffffff</item>
+        <item name="colorControlActivated">#ccffffff</item>
+    </style>
+
+    <style name="AppTheme.Translucent" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="DefaultTextLayoutStyle">
+        <item name="android:backgroundTint">#90FFFFFF</item>
+        <item name="android:textColorHint">#50ffffff</item>
+    </style>
+
+    <style name="AppTheme.FullScreenDialog" parent="AppTheme">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.Slide">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="TransparentRounding">
+        <item name="android:background">@drawable/white_transparent_radius</item>
+    </style>
+
+    <style name="TransparentRounding.EditText">
+        <item name="android:textColorHint">#90FFFFFF</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:textColor">#F0FFFFFF</item>
+    </style>
+
+    <style name="TransparentRounding.EditText.Error">
+        <item name="android:background">@drawable/white_transparent_red_border_radius</item>
+        <item name="android:textColorHint">#90FFFFFF</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:textColor">#F0FF0000</item>
+    </style>
+
+    <style name="TransparentBorderNoBg">
+        <item name="android:background">@drawable/no_bg_transparent_border_radius</item>
+    </style>
+
+    <style name="TransparentBorderNoBg.Button">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:textColor">#F0FFFFFF</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
