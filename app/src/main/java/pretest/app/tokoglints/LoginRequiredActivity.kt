@@ -19,11 +19,9 @@ abstract class LoginRequiredActivity : AppCompatActivity() {
     }
 
     private fun redirectIfGuest() {
-        Log.i("LOGGED", "is loged ${appPreference().getBoolean(LOGGED_IN, false)}")
         if (!loggedIn()) {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
-
         }
     }
 }

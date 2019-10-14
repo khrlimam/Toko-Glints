@@ -34,8 +34,7 @@ class SimpleRecyclerViewAdapter(private val data: MutableList<Goods>) :
             itemView.apply {
                 tvTitle.text = good.name
                 val df = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM)
-                tvSubtitle.text =
-                    "Qty: ${good.qty} - From: ${good.supplier}"
+                tvSubtitle.text = "Qty: ${good.qty} - From: ${good.supplier}"
                 tvDate.text = df.format(good.date)
             }
         }
